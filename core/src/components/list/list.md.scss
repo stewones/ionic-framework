@@ -34,8 +34,8 @@
  * items in an item-sliding when the item is the last
  * element in the item-sliding container.
  */
-.list-md.list-inset ion-item:not(:only-of-type):last-of-type,
-.list-md.list-inset ion-item-sliding:last-of-type ion-item {
+.list-md.list-inset ion-item:not(:only-of-type):last-child:last-of-type,
+.list-md.list-inset ion-item-sliding:last-of-type:last-child ion-item {
   --border-width: 0;
   --inner-border-width: 0;
 }
