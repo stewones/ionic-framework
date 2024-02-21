@@ -112,7 +112,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
   /**
    * Set to `"round"` for a button with more rounded corners.
    */
-  @Prop({ reflect: true }) shape?: 'round';
+  @Prop({ reflect: true }) shape?: 'round' | 'rectangular';
 
   /**
    * Set to `"small"` for a button with less height and padding, to `"default"`
@@ -121,7 +121,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
    * is inside of an item, where the size is `"small"` by default. Set the size to
    * `"default"` inside of an item to make it a standard size button.
    */
-  @Prop({ reflect: true }) size?: 'small' | 'default' | 'large';
+  @Prop({ reflect: true }) size?: 'xsmall' | 'small' | 'default' | 'large' | 'xlarge';
 
   /**
    * If `true`, activates a button with a heavier font weight.
