@@ -150,10 +150,8 @@
   --padding-end: var(--padding-top);
 }
 
-// Button: States
+// Button: State - Activated
 // --------------------------------------------------
-
-// TODO focus, hover and disabled states
 
 :host(.ion-activated) {
   --background: #{ion-color(primary, shade)};
@@ -165,3 +163,53 @@
   --color: #{ion-color(primary, base)};
   --background: #e3e3e3;
 }
+
+// Button: State - Focused
+// --------------------------------------------------
+
+:host .button-native::after {
+  position: absolute;
+
+  content: '';
+
+  top: -4px;
+  left: -4px;
+
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+
+  border: 2px solid transparent;
+
+  border-radius: inherit;
+
+  box-sizing: border-box;
+
+  transition: border-color 0.3s;
+}
+
+:host(.ion-focused){
+  --overflow: visible;
+}
+
+:host(.ion-focused) .button-native::after {
+  border-color: #{ion-color(primary, base, 0.5)};
+}
+
+// Button: State - Disabled
+// --------------------------------------------------
+
+:host(.button-disabled) {
+  opacity: 1;
+
+  --color: #c9c9c9;
+  --border-color: var(--color);
+}
+
+:host(.button-solid.button-disabled) {
+  --background: #f5f5f5;
+}
+
+// Button: State - Hover
+// --------------------------------------------------
+
+// TODO
