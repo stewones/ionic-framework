@@ -212,4 +212,8 @@
 // Button: State - Hover
 // --------------------------------------------------
 
-// TODO
+:host(.button-outline),
+:host(.button-clear) {
+  --background-hover: #121212;
+  --background-hover-opacity: .04;
+}
