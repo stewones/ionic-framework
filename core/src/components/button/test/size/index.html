@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Button - Size</title>
+  <title>Buttons</title>
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="../../../../../css/ionic.bundle.css" rel="stylesheet" />
@@ -24,8 +24,22 @@
 
 <body>
   <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Buttons</ion-title>
+      </ion-toolbar>
+      <ion-toolbar>
+        <ion-segment value="default">
+          <ion-segment-button value="default">Default</ion-segment-button>
+          <ion-segment-button value="activated">Activated</ion-segment-button>
+          <ion-segment-button value="focused">Focused</ion-segment-button>
+          <ion-segment-button value="disabled">Disabled</ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-header>
+
     <ion-content class="ion-padding-horizontal" id="content" no-bounce>
-      <h1>Button</h1>
+      <h1>Default (Soft)</h1>
       <div class="grid">
         <div>
           <ion-button size="xsmall">Button</ion-button>
@@ -178,52 +192,30 @@
           </ion-button>
         </div>
       </div>
-
-      <h1>State: Activated</h1>
-      <div class="grid">
-        <div><ion-button class="ion-activated">Button</ion-button></div>
-        <div><ion-button class="ion-activated" fill="outline">Button</ion-button></div>
-        <div><ion-button class="ion-activated" fill="clear">Button</ion-button></div>
-
-        <div><ion-button shape="round" class="ion-activated">Button</ion-button></div>
-        <div><ion-button shape="round" class="ion-activated" fill="outline">Button</ion-button></div>
-        <div><ion-button shape="round" class="ion-activated" fill="clear">Button</ion-button></div>
-
-        <div><ion-button shape="rectangular" class="ion-activated">Button</ion-button></div>
-        <div><ion-button shape="rectangular" class="ion-activated" fill="outline">Button</ion-button></div>
-        <div><ion-button shape="rectangular" class="ion-activated" fill="clear">Button</ion-button></div>
-      </div>
-
-      <h1>State: Focused</h1>
-      <div class="grid">
-        <div><ion-button class="ion-focused">Button</ion-button></div>
-        <div><ion-button class="ion-focused" fill="outline">Button</ion-button></div>
-        <div><ion-button class="ion-focused" fill="clear">Button</ion-button></div>
-
-        <div><ion-button shape="round" class="ion-focused">Button</ion-button></div>
-        <div><ion-button shape="round" class="ion-focused" fill="outline">Button</ion-button></div>
-        <div><ion-button shape="round" class="ion-focused" fill="clear">Button</ion-button></div>
-
-        <div><ion-button shape="rectangular" class="ion-focused">Button</ion-button></div>
-        <div><ion-button shape="rectangular" class="ion-focused" fill="outline">Button</ion-button></div>
-        <div><ion-button shape="rectangular" class="ion-focused" fill="clear">Button</ion-button></div>
-      </div>
-
-      <h1>State: Disabled</h1>
-      <div class="grid">
-        <div><ion-button disabled>Button</ion-button></div>
-        <div><ion-button disabled fill="outline">Button</ion-button></div>
-        <div><ion-button disabled fill="clear">Button</ion-button></div>
-
-        <div><ion-button shape="round" disabled>Button</ion-button></div>
-        <div><ion-button shape="round" disabled fill="outline">Button</ion-button></div>
-        <div><ion-button shape="round" disabled fill="clear">Button</ion-button></div>
-
-        <div><ion-button shape="rectangular" disabled>Button</ion-button></div>
-        <div><ion-button shape="rectangular" disabled fill="outline">Button</ion-button></div>
-        <div><ion-button shape="rectangular" disabled fill="clear">Button</ion-button></div>
-      </div>
     </ion-content>
+
+    <script>
+      let state = document.querySelector('ion-segment');
+
+      const addState = (value) => {
+        const buttons = document.querySelectorAll('ion-button');
+        buttons.forEach(button => {
+          button.disabled = false;
+          button.classList.remove('ion-focused', 'ion-activated');
+          if (value === 'activated') {
+            button.classList.add('ion-activated');
+          } else if (value === 'focused') {
+            button.classList.add('ion-focused');
+          } else if (value === 'disabled') {
+            button.disabled = true;
+          }
+        });
+      }
+
+      state.addEventListener('ionChange', (ev) => {
+        addState(ev.detail.value);
+      });
+    </script>
   </ion-app>
 </body>
 
