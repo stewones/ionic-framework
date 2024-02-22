@@ -1,110 +1,230 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Button - Size</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <link href="../../../../../css/ionic.bundle.css" rel="stylesheet" />
-    <link href="../../../../../scripts/testing/styles.css" rel="stylesheet" />
-    <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
-    <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
 
-    <style>
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Button - Size</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="../../../../../css/ionic.bundle.css" rel="stylesheet" />
+  <link href="../../../../../scripts/testing/styles.css" rel="stylesheet" />
+  <script src="../../../../../scripts/testing/scripts.js"></script>
+  <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
+  <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
 
-  <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar>
-          <!-- <ion-buttons slot="start">
-            <ion-button fill="solid">Default Button</ion-button>
-            <ion-button fill="solid" size="small">Small Button</ion-button>
-            <ion-button fill="solid" size="large">Large Button</ion-button>
-          </ion-buttons> -->
-          <ion-title>Button - Size</ion-title>
-        </ion-toolbar>
-      </ion-header>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
 
-      <ion-content class="ion-padding-horizontal" id="content" no-bounce>
-        <h1>Default</h1>
-        <div class="grid">
-          <div><ion-button size="xsmall">Button</ion-button></div>
-          <div><ion-button size="xsmall" fill="outline">Extra Small</ion-button></div>
-          <div><ion-button size="xsmall" fill="clear">Extra Small</ion-button></div>
+  </style>
+</head>
 
-          <div><ion-button size="small">Button</ion-button></div>
-          <div><ion-button size="small" fill="outline">Small</ion-button></div>
-          <div><ion-button size="small" fill="clear">Small</ion-button></div>
+<body>
+  <ion-app>
+    <ion-content class="ion-padding-horizontal" id="content" no-bounce>
+      <h1>Button</h1>
+      <div class="grid">
+        <div>
+          <ion-button size="xsmall">Button</ion-button>
+        </div>
+        <div><ion-button size="xsmall" fill="outline">Button</ion-button></div>
+        <div><ion-button size="xsmall" fill="clear">Button</ion-button></div>
 
-          <div><ion-button>Button</ion-button></div>
-          <div><ion-button fill="outline">Default</ion-button></div>
-          <div><ion-button fill="clear">Default</ion-button></div>
+        <div><ion-button size="small">Button</ion-button></div>
+        <div><ion-button size="small" fill="outline">Button</ion-button></div>
+        <div><ion-button size="small" fill="clear">Button</ion-button></div>
 
-          <div><ion-button size="large">Button</ion-button></div>
-          <div><ion-button size="large" fill="outline">Large</ion-button></div>
-          <div><ion-button size="large" fill="clear">Large</ion-button></div>
+        <div><ion-button>Button</ion-button></div>
+        <div><ion-button fill="outline">Button</ion-button></div>
+        <div><ion-button fill="clear">Button</ion-button></div>
 
-          <div><ion-button size="xlarge">Button</ion-button></div>
-          <div><ion-button size="xlarge" fill="outline">Extra Large</ion-button></div>
-          <div><ion-button size="xlarge" fill="clear">Extra Large</ion-button></div>
+        <div><ion-button size="large">Button</ion-button></div>
+        <div><ion-button size="large" fill="outline">Button</ion-button></div>
+        <div><ion-button size="large" fill="clear">Button</ion-button></div>
+
+        <div><ion-button size="xlarge">Button</ion-button></div>
+        <div><ion-button size="xlarge" fill="outline">Button</ion-button></div>
+        <div><ion-button size="xlarge" fill="clear">Button</ion-button></div>
+      </div>
+
+      <h1>Round</h1>
+      <div class="grid">
+        <div><ion-button shape="round" size="xsmall">Button</ion-button></div>
+        <div><ion-button shape="round" size="xsmall" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" size="xsmall" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round" size="small">Button</ion-button></div>
+        <div><ion-button shape="round" size="small" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" size="small" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round">Button</ion-button></div>
+        <div><ion-button shape="round" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round" size="large">Button</ion-button></div>
+        <div><ion-button shape="round" size="large" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" size="large" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round" size="xlarge">Button</ion-button></div>
+        <div><ion-button shape="round" size="xlarge" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" size="xlarge" fill="clear">Button</ion-button></div>
+      </div>
+
+      <h1>Square</h1>
+      <div class="grid">
+        <div><ion-button shape="square" size="xsmall">Button</ion-button></div>
+        <div><ion-button shape="square" size="xsmall" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="square" size="xsmall" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="square" size="small">Button</ion-button></div>
+        <div><ion-button shape="square" size="small" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="square" size="small" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="square">Button</ion-button></div>
+        <div><ion-button shape="square" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="square" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="square" size="large">Button</ion-button></div>
+        <div><ion-button shape="square" size="large" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="square" size="large" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="square" size="xlarge">Button</ion-button></div>
+        <div><ion-button shape="square" size="xlarge" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="square" size="xlarge" fill="clear">Button</ion-button></div>
+      </div>
+
+      <h1>Icon only</h1>
+      <div class="grid">
+        <div>
+          <ion-button shape="round" size="xsmall">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="xsmall" fill="outline">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="xsmall" fill="clear">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
         </div>
 
-        <h1>Round</h1>
-        <div class="grid">
-          <div><ion-button shape="round" size="xsmall">Button</ion-button></div>
-          <div><ion-button shape="round" size="xsmall" fill="outline">Extra Small</ion-button></div>
-          <div><ion-button shape="round" size="xsmall" fill="clear">Extra Small</ion-button></div>
-
-          <div><ion-button shape="round" size="small">Button</ion-button></div>
-          <div><ion-button shape="round" size="small" fill="outline">Small</ion-button></div>
-          <div><ion-button shape="round" size="small" fill="clear">Small</ion-button></div>
-
-          <div><ion-button shape="round">Button</ion-button></div>
-          <div><ion-button shape="round" fill="outline">Default</ion-button></div>
-          <div><ion-button shape="round" fill="clear">Default</ion-button></div>
-
-          <div><ion-button shape="round" size="large">Button</ion-button></div>
-          <div><ion-button shape="round" size="large" fill="outline">Large</ion-button></div>
-          <div><ion-button shape="round" size="large" fill="clear">Large</ion-button></div>
-
-          <div><ion-button shape="round" size="xlarge">Button</ion-button></div>
-          <div><ion-button shape="round" size="xlarge" fill="outline">Extra Large</ion-button></div>
-          <div><ion-button shape="round" size="xlarge" fill="clear">Extra Large</ion-button></div>
+        <div>
+          <ion-button shape="round" size="small">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="small" fill="outline">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="small" fill="clear">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
         </div>
 
-        <h1>Square</h1>
-        <div class="grid">
-          <div><ion-button shape="square" size="xsmall">Extra Small</ion-button></div>
-          <div><ion-button shape="square" size="xsmall" fill="outline">Extra Small</ion-button></div>
-          <div><ion-button shape="square" size="xsmall" fill="clear">Extra Small</ion-button></div>
-
-          <div><ion-button shape="square" size="small">Small</ion-button></div>
-          <div><ion-button shape="square" size="small" fill="outline">Small</ion-button></div>
-          <div><ion-button shape="square" size="small" fill="clear">Small</ion-button></div>
-
-          <div><ion-button shape="square">Default</ion-button></div>
-          <div><ion-button shape="square" fill="outline">Default</ion-button></div>
-          <div><ion-button shape="square" fill="clear">Default</ion-button></div>
-
-          <div><ion-button shape="square" size="large">Large</ion-button></div>
-          <div><ion-button shape="square" size="large" fill="outline">Large</ion-button></div>
-          <div><ion-button shape="square" size="large" fill="clear">Large</ion-button></div>
-
-          <div><ion-button shape="square" size="xlarge">Extra Large</ion-button></div>
-          <div><ion-button shape="square" size="xlarge" fill="outline">Extra Large</ion-button></div>
-          <div><ion-button shape="square" size="xlarge" fill="clear">Extra Large</ion-button></div>
+        <div>
+          <ion-button shape="round">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
         </div>
-      </ion-content>
-    </ion-app>
-  </body>
+        <div>
+          <ion-button shape="round" fill="outline">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" fill="clear">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+
+        <div>
+          <ion-button shape="round" size="large">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="large" fill="outline">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="large" fill="clear">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+
+        <div>
+          <ion-button shape="round" size="xlarge">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="xlarge" fill="outline">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+        <div>
+          <ion-button shape="round" size="xlarge" fill="clear">
+            <ion-icon slot="icon-only" name="triangle-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+      <h1>State: Activated</h1>
+      <div class="grid">
+        <div><ion-button class="ion-activated">Button</ion-button></div>
+        <div><ion-button class="ion-activated" fill="outline">Button</ion-button></div>
+        <div><ion-button class="ion-activated" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round" class="ion-activated">Button</ion-button></div>
+        <div><ion-button shape="round" class="ion-activated" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" class="ion-activated" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="rectangular" class="ion-activated">Button</ion-button></div>
+        <div><ion-button shape="rectangular" class="ion-activated" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="rectangular" class="ion-activated" fill="clear">Button</ion-button></div>
+      </div>
+
+      <h1>State: Focused</h1>
+      <div class="grid">
+        <div><ion-button class="ion-focused">Button</ion-button></div>
+        <div><ion-button class="ion-focused" fill="outline">Button</ion-button></div>
+        <div><ion-button class="ion-focused" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round" class="ion-focused">Button</ion-button></div>
+        <div><ion-button shape="round" class="ion-focused" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" class="ion-focused" fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="rectangular" class="ion-focused">Button</ion-button></div>
+        <div><ion-button shape="rectangular" class="ion-focused" fill="outline">Button</ion-button></div>
+        <div><ion-button shape="rectangular" class="ion-focused" fill="clear">Button</ion-button></div>
+      </div>
+
+      <h1>State: Disabled</h1>
+      <div class="grid">
+        <div><ion-button disabled>Button</ion-button></div>
+        <div><ion-button disabled fill="outline">Button</ion-button></div>
+        <div><ion-button disabled fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="round" disabled>Button</ion-button></div>
+        <div><ion-button shape="round" disabled fill="outline">Button</ion-button></div>
+        <div><ion-button shape="round" disabled fill="clear">Button</ion-button></div>
+
+        <div><ion-button shape="rectangular" disabled>Button</ion-button></div>
+        <div><ion-button shape="rectangular" disabled fill="outline">Button</ion-button></div>
+        <div><ion-button shape="rectangular" disabled fill="clear">Button</ion-button></div>
+      </div>
+    </ion-content>
+  </ion-app>
+</body>
+
 </html>

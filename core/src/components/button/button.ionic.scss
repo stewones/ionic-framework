@@ -3,12 +3,9 @@
 // Base Button CSS not specific to OS
 // --------------------------------------------------
 
+/* Required for the target area pseudo-element */
 :host {
   position: relative;
-}
-
-:host(.ion-activated) {
-  --background: #{ion-color(primary, shade)};
 }
 
 :host(.button-outline) {
@@ -16,36 +13,31 @@
   --border-style: solid;
 }
 
-// Clear and outline buttons use a gray background
-:host(.button-outline.ion-activated),
-:host(.button-clear.ion-activated) {
-  --color: #{ion-color(primary, base)};
-  --background: #e3e3e3;
-}
-
-// TODO focus, hover and disabled states
-
 // Button Sizes
 // --------------------------------------------------
 
-// Extra Small Button
+/* Extra Small Button */
 :host(.button-xsmall) {
   min-height: 24px;
 
-  // Setting --padding-top will set padding for all sides
+  /* Setting --padding-top will set padding for all sides */
   --padding-top: 4px;
   --padding-end: 12px;
+
+  font-size: 12px;
 }
 
-// Small Button
+/* Small Button */
 :host(.button-small) {
   min-height: 32px;
 
   --padding-top: 8px;
   --padding-end: 16px;
+
+  font-size: 12px;
 }
 
-// Default Button / Medium Button
+/* Default Button / Medium Button */
 :host {
   min-height: 40px;
 
@@ -53,33 +45,44 @@
   --padding-end: 16px;
   --padding-bottom: var(--padding-top);
   --padding-start: var(--padding-end);
+
+  font-size: 14px;
 }
 
-// Large Button
+/* Large Button */
 :host(.button-large) {
   min-height: 48px;
 
   --padding-top: 16px;
   --padding-end: 24px;
+
+  font-size: 16px;
 }
 
-// Extra Large Button
+/* Extra Large Button */
 :host(.button-xlarge) {
   min-height: 56px;
 
   --padding-top: 20px;
   --padding-end: 32px;
+
+  font-size: 20px;
+}
+
+/* Button containing only an icon */
+::slotted(ion-icon[slot=icon-only]) {
+  font-size: 1em;
 }
 
 // Button Shape: Default
 // --------------------------------------------------
 
-// default button is "soft"
+/* default button is "soft" */
 :host {
   --border-radius: 8px;
 }
 
-// small and extra small have smaller radius
+/* small and extra small have smaller radius */
 :host(.button-xsmall),
 :host(.button-small) {
   --border-radius: 4px;
@@ -115,16 +118,50 @@
   transform: translateY(-50%);
 
   min-height: 48px;
-  z-index: -1;
 
   cursor: pointer;
 
   // This is added to see the touch area
   // and will not be in the final code
-  background: rgb(255 0 0 / 0.2);
+  // background: rgb(255 0 0 / 0.2);
+
+  // Remove this it is just here so the red background
+  // does not cover the button color
+  z-index: -1;
 }
 
-// TODO find a way to auto adjust height
-:host(.button-xlarge)::after {
-  min-height: 56px;
+// Icon Only Button
+// --------------------------------------------------
+
+:host(.button-xsmall.button-has-icon-only) {
+  --padding-end: 6px;
+}
+
+:host(.button-small.button-has-icon-only) {
+  --padding-end: 10px;
+}
+
+:host(.button-has-icon-only) {
+  --padding-end: 13px;
+}
+
+:host(.button-large.button-has-icon-only),
+:host(.button-xlarge.button-has-icon-only) {
+  --padding-end: var(--padding-top);
+}
+
+// Button: States
+// --------------------------------------------------
+
+// TODO focus, hover and disabled states
+
+:host(.ion-activated) {
+  --background: #{ion-color(primary, shade)};
+}
+
+/* Clear and outline buttons use a gray background */
+:host(.button-outline.ion-activated),
+:host(.button-clear.ion-activated) {
+  --color: #{ion-color(primary, base)};
+  --background: #e3e3e3;
 }
