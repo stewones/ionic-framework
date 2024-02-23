@@ -114,12 +114,6 @@
   font-size: #{$button-ios-small-font-size};
 }
 
-:host(.button-has-icon-only) {
-  --padding-top: 0;
-  --padding-bottom: 0;
-}
-
-
 // iOS Round Button
 // --------------------------------------------------
 
@@ -131,6 +125,31 @@
   --padding-bottom: #{$button-ios-round-padding-bottom};
 }
 
+// iOS Icon Only Button
+// --------------------------------------------------
+
+::slotted(ion-icon[slot="icon-only"]) {
+  font-size: 1.1em;
+}
+
+:host(.button-has-icon-only) {
+  --padding-top: 0;
+  --padding-bottom: var(--padding-top);
+  --padding-end: 15px;
+  --padding-start: var(--padding-end);
+}
+
+:host(.button-small.button-has-icon-only) {
+  --padding-end: 6px;
+}
+
+:host(.button-small) ::slotted(ion-icon[slot="icon-only"]) {
+  font-size: 1.2em;
+}
+
+:host(.button-large.button-has-icon-only) {
+  --padding-end: 19px;
+}
 
 // iOS Strong Button
 // --------------------------------------------------

@@ -12,6 +12,14 @@
     <script src="../../../../../scripts/testing/scripts.js"></script>
     <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
     <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
+
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+    </style>
   </head>
 
   <body>
@@ -22,7 +30,83 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-content class="ion-padding ion-text-center" id="content" no-bounce>
+      <ion-content class="ion-padding" no-bounce>
+        <div class="grid">
+          <div>
+            <ion-button size="small" shape="round">Button</ion-button>
+          </div>
+          <div>
+            <ion-button size="small" shape="round" fill="outline">Button</ion-button>
+          </div>
+          <div>
+            <ion-button size="small" shape="round" fill="clear">Button</ion-button>
+          </div>
+          <div>
+            <ion-button shape="round">Button</ion-button>
+          </div>
+          <div>
+            <ion-button shape="round" fill="outline">Button</ion-button>
+          </div>
+          <div>
+            <ion-button shape="round" fill="clear">Button</ion-button>
+          </div>
+          <div>
+            <ion-button size="large" shape="round">Button</ion-button>
+          </div>
+          <div>
+            <ion-button size="large" shape="round" fill="outline">Button</ion-button>
+          </div>
+          <div>
+            <ion-button size="large" shape="round" fill="clear">Button</ion-button>
+          </div>
+
+          <div>
+            <ion-button size="small" shape="round">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button size="small" shape="round" fill="outline">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button size="small" shape="round" fill="clear">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button shape="round">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button shape="round" fill="outline">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button shape="round" fill="clear">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button size="large" shape="round">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button size="large" shape="round" fill="outline">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+          <div>
+            <ion-button size="large" shape="round" fill="clear">
+              <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
+
         <ion-button shape="round">Default</ion-button>
         <ion-button shape="round" color="primary">Primary</ion-button>
         <ion-button shape="round" color="secondary">Secondary</ion-button>
@@ -55,12 +139,5 @@
         <ion-button shape="round" strong>Strong</ion-button>
       </ion-content>
     </ion-app>
-
-    <style>
-      ion-button {
-        display: block !important;
-        margin: 8px auto !important;
-      }
-    </style>
   </body>
 </html>
