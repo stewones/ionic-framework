@@ -303,6 +303,17 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
     this.isCircle = this.hasIconOnly;
   };
 
+  private getSize() {
+    const theme = getIonTheme(this);
+    const { size } = this;
+
+    if (size === undefined && this.inItem)
+      return 'small';
+    if ((theme === 'ios' || theme === 'md') && (size === 'xsmall' || size === 'xlarge'))
+      return undefined;
+    return size;
+  }
+
   render() {
     const theme = getIonTheme(this);
 
@@ -312,7 +323,6 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
       disabled,
       rel,
       target,
-      size,
       href,
       color,
       expand,
@@ -322,7 +332,7 @@ export class Button implements ComponentInterface, AnchorInterface, ButtonInterf
       inheritedAttributes,
     } = this;
 
-    const finalSize = size === undefined && this.inItem ? 'small' : size;
+    const finalSize = this.getSize();
     const TagType = href === undefined ? 'button' : ('a' as any);
     const attrs =
       TagType === 'button'
